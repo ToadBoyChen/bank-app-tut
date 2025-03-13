@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-declare type SearchParamProps = {
+declare type SearchParamProperties = {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
@@ -136,30 +136,30 @@ declare type NewDwollaCustomerParams = {
   ssn: string;
 };
 
-declare interface CreditCardProps {
+declare interface CreditCardProperties {
   account: Account;
   userName: string;
   showBalance?: boolean;
 }
 
-declare interface BankInfoProps {
+declare interface BankInfoProperties {
   account: Account;
   appwriteItemId?: string;
   type: "full" | "card";
 }
 
-declare interface HeaderBoxProps {
+declare interface HeaderBoxProperties {
   type?: "title" | "greeting";
   title: string;
   subtext: string;
   user?: string;
 }
 
-declare interface MobileNavProps {
+declare interface MobileNavProperties {
   user: User;
 }
 
-declare interface PageHeaderProps {
+declare interface PageHeaderProperties {
   topTitle: string;
   bottomTitle: string;
   topDescription: string;
@@ -167,12 +167,12 @@ declare interface PageHeaderProps {
   connectBank?: boolean;
 }
 
-declare interface PaginationProps {
+declare interface PaginationProperties {
   page: number;
   totalPages: number;
 }
 
-declare interface PlaidLinkProps {
+declare interface PlaidLinkProperties {
   user: User;
   variant?: "primary" | "ghost";
   dwollaCustomerId?: string;
@@ -187,87 +187,87 @@ declare interface PlaidLinkProps {
 //   image: string;
 // };
 
-declare interface AuthFormProps {
+declare interface AuthFormProperties {
   type: "sign-in" | "sign-up";
 }
 
-declare interface BankDropdownProps {
+declare interface BankDropdownProperties {
   accounts: Account[];
   setValue?: UseFormSetValue<any>;
   otherStyles?: string;
 }
 
-declare interface BankTabItemProps {
+declare interface BankTabItemProperties {
   account: Account;
   appwriteItemId?: string;
 }
 
-declare interface TotlaBalanceBoxProps {
+declare interface TotalBalanceBoxProperties {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;
 }
 
-declare interface FooterProps {
+declare interface FooterProperties {
   user: User;
 }
 
-declare interface RightSidebarProps {
+declare interface RightSidebarProperties {
   user: User;
   transactions: Transaction[];
   banks: Bank[] & Account[];
 }
 
-declare interface SiderbarProps {
+declare interface SiderbarProperties {
   user: User;
 }
 
-declare interface RecentTransactionsProps {
+declare interface RecentTransactionsProperties {
   accounts: Account[];
   transactions: Transaction[];
   appwriteItemId: string;
   page: number;
 }
 
-declare interface TransactionHistoryTableProps {
+declare interface TransactionHistoryTableProperties {
   transactions: Transaction[];
   page: number;
 }
 
-declare interface CategoryBadgeProps {
+declare interface CategoryBadgeProperties {
   category: string;
 }
 
-declare interface TransactionTableProps {
+declare interface TransactionTableProperties {
   transactions: Transaction[];
 }
 
-declare interface CategoryProps {
+declare interface CategoryProperties {
   category: CategoryCount;
 }
 
-declare interface DoughnutChartProps {
+declare interface DoughnutChartProperties {
   accounts: Account[];
 }
 
-declare interface PaymentTransferFormProps {
+declare interface PaymentTransferFormProperties {
   accounts: Account[];
 }
 
 // Actions
-declare interface getAccountsProps {
+declare interface getAccountsProperties {
   userId: string;
 }
 
-declare interface getAccountProps {
+declare interface getAccountProperties {
   appwriteItemId: string;
 }
 
-declare interface getInstitutionProps {
+declare interface getInstitutionProperties {
   institutionId: string;
 }
 
-declare interface getTransactionsProps {
+declare interface getTransactionsProperties {
   accessToken: string;
 }
 
@@ -278,7 +278,7 @@ declare interface CreateFundingSourceOptions {
   _links: object; // Dwolla On Demand Authorization Link
 }
 
-declare interface CreateTransactionProps {
+declare interface CreateTransactionProperties {
   name: string;
   amount: string;
   senderId: string;
@@ -288,25 +288,25 @@ declare interface CreateTransactionProps {
   email: string;
 }
 
-declare interface getTransactionsByBankIdProps {
+declare interface getTransactionsByBankIdProperties {
   bankId: string;
 }
 
-declare interface signInProps {
+declare interface signInProperties {
   email: string;
   password: string;
 }
 
-declare interface getUserInfoProps {
+declare interface getUserInfoProperties {
   userId: string;
 }
 
-declare interface exchangePublicTokenProps {
+declare interface exchangePublicTokenProperties {
   publicToken: string;
   user: User;
 }
 
-declare interface createBankAccountProps {
+declare interface createBankAccountProperties {
   accessToken: string;
   userId: string;
   accountId: string;
@@ -315,14 +315,14 @@ declare interface createBankAccountProps {
   sharableId: string;
 }
 
-declare interface getBanksProps {
+declare interface getBanksProperties {
   userId: string;
 }
 
-declare interface getBankProps {
+declare interface getBankProperties {
   documentId: string;
 }
 
-declare interface getBankByAccountIdProps {
+declare interface getBankByAccountIdProperties {
   accountId: string;
 }
